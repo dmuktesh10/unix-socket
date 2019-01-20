@@ -39,5 +39,18 @@ where each string is arguments passed.
 */
 int main(int argc, char *argv[])
 {
+  int sockfd, newsockfd, portno,clilen;
+  chr buffer[256];
+  struct sockaddr_in serv_addr, cli_addr;
+  int n;
+
+/*
+  AF_INET is socket address family here we are communicating over IPV4 protocol
+  so socket address family i.e sa_family is AF_INET
+  SOCK_STREAM is type of socket.There are 4
+  SOCK_STREAM,SOCK_DGRAM,SOCK_SEQPACKET,SOCK_RAW
+  SOCK_STREAM is for tcp socket
+*/
+  sockfd=socket(AF_INET, SOCK_STREAM, 0);
   return 0;
 }
