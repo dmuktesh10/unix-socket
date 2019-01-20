@@ -31,3 +31,13 @@
  and one macro NULL
 */
 #include <string.h>
+
+/*
+argc stands for argument count i.e. number arguments passed
+argv stands for argument vector which  is 1-D array of string
+where each string is arguments passed.
+*/
+int main(int argc, char *argv[])
+{
+  return 0;
+}
