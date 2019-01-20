@@ -52,5 +52,14 @@ int main(int argc, char *argv[])
   SOCK_STREAM is for tcp socket
 */
   sockfd=socket(AF_INET, SOCK_STREAM, 0);
+
+// assign port number over which socket will communicate
+  portno=5001;
+
+  serv_addr.sin_family=AF_INET;
+// bind socket too all interfaces. INADDR_ANY is cosntant equal to 0
+  serv_addr.sin_addr.s_addr=INADDR_ANY;
+// htons convert host byte order to network byte order
+  serv_addr.sin_addr.port=htons(portno);
   return 0;
 }
